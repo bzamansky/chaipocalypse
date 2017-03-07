@@ -108,6 +108,13 @@ button {
 	display: none;
 }
 
+#yougot {
+	display: inline-block;
+	position: relative;
+	color: black;
+	margin-left: 0;
+}
+
 #desc {
 	width: 500px;
 }
