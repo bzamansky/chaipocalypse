@@ -48,3 +48,7 @@ span.check_img{
 button {
 	margin-top: 30px;
 }
+
+#answers {
+	display: none;
+}
