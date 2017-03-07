@@ -113,8 +113,10 @@ $(document).ready(function() {
 
     $("#yougot").html('You got: ' + name);
     $("#desc").html(
-      '<img src="img/' + name.toLowerCase() + '.jpg" alt="' + name +'">' +
+      '<img src="img/' + name.toLowerCase() + '.jpg" alt="' + name +'">'
+      + "<p>" +
       answer_person[name]
+      + "</p>"
     );
   });
 
