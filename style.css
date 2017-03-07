@@ -52,3 +52,13 @@ button {
 #answers {
 	display: none;
 }
+
+#desc {
+	width: 500px;
+}
+
+#desc img {
+	width: 200px;
+	height: 200px;
+	float: left;
+}

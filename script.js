@@ -103,8 +103,8 @@ $(document).ready(function() {
       }
     }
 
-    console.log(max);
-    console.log(max_num);
+    // console.log(max);
+    // console.log(max_num);
 
     $("#question_form").css('display','none');
     $("#answers").css('display','block');
@@ -112,7 +112,10 @@ $(document).ready(function() {
     var name = max[Math.floor(Math.random()*max.length)];
 
     $("#yougot").html('You got: ' + name);
-    $("#desc").html(answer_person[name]);
+    $("#desc").html(
+      '<img src="img/' + name.toLowerCase() + '.jpg" alt="' + name +'">' +
+      answer_person[name]
+    );
   });
 
   $("#reset").click(function(){
