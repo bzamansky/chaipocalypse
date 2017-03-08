@@ -57,7 +57,10 @@ $(document).ready(function() {
     $(this).parent().siblings().find('.check_img')
       .css('background-image', "url('unchecked.png')")
       .css('background-size', '77%');
-    $(this).parent().siblings().css('background-color', '#f2f2f2');
+    $(this).parent().siblings()
+      .css('background-color', '#f2f2f2');
+      $(this).parent().siblings().children()
+      .css('background-color', '#f2f2f2');
     $(this).parent().css('background-color','#8ac5ff');
     $(this).css('background-color','#8ac5ff');
     $(this).children().prop('checked','true');
