@@ -53,7 +53,21 @@ $(document).ready(function() {
 
   $(".check_img").css('background-image', "url('unchecked.png')");
 
+  $('li').hover(function(){
+    if (!$(this).hasClass('selected')){
+      $(this).css('background-color', '#BFBFBF');
+      $(this).children().css('background-color', '#BFBFBF');
+    }
+  }, function(){
+    if (!$(this).hasClass('selected')){
+      $(this).css('background-color', '#f2f2f2');
+      $(this).children().css('background-color', '#f2f2f2');
+    }
+  });
+
   $('label').click(function(){
+    $(this).parent().siblings().removeClass('selected');
+    $(this).parent().siblings().children().removeClass('selected');
     $(this).parent().siblings().find('.check_img')
       .css('background-image', "url('unchecked.png')")
       .css('background-size', '77%');
@@ -63,6 +77,8 @@ $(document).ready(function() {
       .css('background-color', '#f2f2f2');
     $(this).parent().css('background-color','#8ac5ff');
     $(this).css('background-color','#8ac5ff');
+    $(this).addClass('selected');
+    $(this).parent().addClass('selected');
     $(this).children().prop('checked','true');
 
     $(this).find('.check_img')
